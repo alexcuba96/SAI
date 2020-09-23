@@ -48,22 +48,24 @@
     						{{ csrf_field() | raw }}
     						<div class="form-group-material">
     							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material">
-    							<label for="login-username" class="label-material">E-Mail</label>
+    							<label for="login-username" class="label-material">Correo Electrónico</label>
     						</div>
     						<div class="form-group-material">
     							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material">
     							<label for="login-password" class="label-material">Clave</label>
     						</div>
-    						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Login</button>
+    						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Ingresar</button>
     							<!-- This should be submit button but I replaced it with <a> for demo purposes-->
     						</div>
     					</form>
-						<small>No tienes una cuenta? </small>
-						<a href="{{baseUrl}}/reg/registrarRed" class="signup">Registrate</a>
+						<small>¿No tienes una cuenta? </small>
+							<a href="{{baseUrl}}/reg/registrarRed" class="signup">Registrate</a>
 						</br>
-						<small>¿Olvidaste contraseña? contacte a los administradores</small>
-						</br><small><b>administracion@gatosrugby.com.co</b></small>
-
+							<a href="{{baseUrl}}/getManual" class="signup" target="_blank">¿Olvidaste la Contraseña?</a>
+						</br>
+						</br>
+							<a href="{{baseUrl}}/getManual" class="signup" target="_blank" text-align: right>Ayudas</a>
+						</br>
     					{% if flash.getMessages('error') %}
     						<div class="authFailed">
     							{{ flash.getMessage('error') | first }}

@@ -1,0 +1,162 @@
+p {
+  margin: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  text-indent: 0;
+  text-align: left;
+  line-height: normal;
+  font-family: 'Times New Roman';
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+map > area {
+  outline: none;
+}
+table.align-c {
+  margin: 0 auto;
+}
+table.align-r {
+  margin: 0 0 0 auto;
+}
+img {
+  border: none;
+}
+.float-pos-l {
+  float: left;
+}
+.float-pos-r {
+  float: right;
+}
+.ts0 {
+  font-family: Tahoma;
+  font-size: 20pt;
+  font-weight: bold;
+  color: #92d050;
+}
+.ts1 {
+  font-family: Tahoma;
+  font-size: 20pt;
+  font-weight: bold;
+}
+.ts2 {
+  font-family: Tahoma;
+  font-size: 12pt;
+}
+.ts3 {
+  font-family: Tahoma;
+}
+.ts4 {
+  font-family: Tahoma;
+}
+.ts5 {
+  font-family: Tahoma;
+}
+.ts6 {
+  font-family: 'Courier New';
+}
+.ts7 {
+  font-family: Tahoma;
+}
+.hs0 {
+  font-family: Tahoma;
+  text-decoration: underline;
+  color: Blue;
+}
+.hs1 {
+  font-family: Tahoma;
+  text-decoration: underline;
+  color: Blue;
+}
+.ps0 {
+  text-align: center;
+}
+.ps1 {
+  text-align: justify;
+}
+.ps2 {
+  text-align: justify;
+  font-size: 11pt;
+}
+.ps3 {
+  padding-left: 1.27cm;
+  text-indent: -0.64cm;
+  text-align: justify;
+}
+.ps4 {
+  text-align: justify;
+  font-size: 10pt;
+}
+.ps5 {
+  font-size: 10pt;
+}
+.ps6 {
+  font-size: 11pt;
+}
+.hline0 {
+  width: 100%;
+  height: 0px;
+  margin: 8px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: DimGray;
+  border-right-color: #e3e3e3;
+  border-bottom-color: #e3e3e3;
+  border-left-color: DimGray;
+}
+.tbl0 {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-color: transparent;
+  background-image: url('../../topics/images/image(5).png');
+  background-position: center top;
+}
+.tbl0 > tbody > tr.row0 {
+  border-style: none;
+}
+.tbl0 > tbody > tr > td.cell0 {
+  height: 4.68cm;
+  vertical-align: top;
+  border-style: hidden;
+  border-color: transparent;
+}
+.tbl1 {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: none;
+  background-image: url('../../topics/images/image(6).png');
+  background-position: left top;
+}
+.tbl1 > tbody > tr.row0 {
+  border-style: none;
+}
+.tbl1 > tbody > tr > td.cell0 {
+  height: 0.64cm;
+  vertical-align: top;
+  border-style: none;
+}
+.tbl2 {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: none;
+  background-image: url('../../topics/images/piepagina.png');
+  background-position: center top;
+}
+.tbl2 > tbody > tr.row0 {
+  border-style: none;
+}
+.tbl2 > tbody > tr > td.cell0 {
+  height: 2.1cm;
+  vertical-align: top;
+  border-style: none;
+}
+.hs-mobile img.hs-fullwidth-m {
+  width: 100%;
+  height: auto;
+  float: none;
+}

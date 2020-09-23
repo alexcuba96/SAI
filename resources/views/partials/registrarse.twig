@@ -51,7 +51,7 @@
 						<form id="frmRegistrarse">
 							<div class="form-group-material">
 								<input id="login-username" type="text" v-name="Usuario" v-only="text" name="username" class="input-material">
-								<label for="login-username" class="label-material">Nombre Usuario</label>
+								<label for="login-username" class="label-material">Nombre(s) Y Apellido(s)</label>
 							</div>
 							<div class="form-group-material">
 								<input type="text" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="input-material">
@@ -60,23 +60,25 @@
 
 							<div class="form-group-material">
 								<input id="email" type="text" v-name="E-mail" v-only="email" name="email" class="input-material">
-								<label for="email" class="label-material">E-Mail</label>
+								<label for="email" class="label-material">Correo Electrónico</label>
 							</div>
 
 							<div class="form-group-material">
-								<input id="password" type="password" v-name="Clave" name="password" class="input-material">
+								<input id="password" type="password" v-name="Clave" name="password" class="input-material" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 								<label for="password" class="label-material">Clave</label>
 							</div>
 							<div class="form-group-material">
-								<input id="passwordConfirm" type="password" v-name="Confirmar Clave" v-only="confirmar" name="passwordConfirm" class="input-material">
+								<input id="passwordConfirm" type="password" v-name="Confirmar Clave" v-only="confirmar" name="passwordConfirm" class="input-material" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 								<label for="passwordConfirm" class="label-material">Confirmar Clave</label>
 							</div>
 
 							<div class="form-group-material">
 								<select name="group_id" id="group_id" class="form-control" v-name="Perfil">
 									<option value="">Seleccione Perfil</option>
-									<option value="2">Jugador</option>
-									<option value="3">Miembro</option>
+									<option value="2">Administrativo</option>
+									<option value="3">Jugador</option>
+									<option value="3">Entrenador</option>
+									<option value="3">Colaborador</option>
 								</select>
 							</div>
 
@@ -91,7 +93,7 @@
 							</div>
 						</form>
 
-						<small>Ya esta registrado?
+						<small>¿Ya esta registrado?
 						</small>
 						<a href="{{baseUrl}}/auth" class="signup">Inicia Sesión</a>
 
