@@ -1,0 +1,158 @@
+{% extends 'layout.twig' %}
+{% block updatemember %}
+	{% include 'partials/nav.twig' %}
+
+	{% for data in datosMember %}
+
+
+
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+
+
+
+						<!--/col-->
+						<div class="col-md-8 offset-md-2">
+							<span class="anchor" id="formUserEdit"></span>
+							<hr class="my-5">
+
+							<!-- form user info -->
+							<div class="card card-outline-secondary">
+								<div class="card-header">
+									<h3 class="mb-0">Editar Miembro</h3>
+								</div>
+								<div class="card-body">
+									<form class="form" role="form" id="updateMember" autocomplete="off">
+
+
+										<input type="hidden" class="tipoEstadoSelected novalidate" value="{{data.id_estado}}">
+
+										<input type="hidden" class="tipoDocSelected novalidate" value="{{data.id_tipo_doc}}">
+										<input type="hidden" class="tipoEpsSelected novalidate" value="{{data.id_eps}}">
+										
+
+										<input type="hidden" class="id novalidate" name="id" id="id" value="{{data.id}}">
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Nombres</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="Nombres" v-name="Nombres" v-only="text" name="nombres" id="nombres" class="form-control" value="{{data.nombres}}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="Apellidos" v-name="Apellidos" v-only="text" name="apellidos" id="apellidos" class="form-control" value="{{data.apellidos}}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Tipo Doc</label>
+											<div class="col-lg-9">
+												<div>
+													<select name="id_tipo_doc" id="id_tipo_doc" class="form-control">
+
+
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Identificación</label>
+											<div class="col-lg-9">
+												<input type="text" disabled="true" placeholder="Identificación" name="identificacion" class="form-control" value="{{data.identificacion}}">
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Telefono</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="Telefono" v-name="Telefono" v-only=" number" name="telefono" class="form-control" value="{{data.telefono}}">
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Dirección</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="Dirección" v-name="Dirección" name="direccion" class="form-control" value="{{data.direccion}}">
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">E-Mail</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="E-Mail" v-name="E-mail" v-only="email" name="email" class="form-control" value="{{data.email}}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Fecha Nacimiento</label>
+											<div class="col-lg-9">
+												<input type="date" placeholder="Fecha Nacimiento" v-name="Fecha Nacimiento" name="fecha_nacm" class="form-control" value="{{data.fecha_nacm}}">
+											</div>
+										</div>
+
+										
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Estado</label>
+											<div class="col-lg-9">
+												<div>
+													<select name="id_estado" id="id_estado" class="form-control">
+
+
+													</select>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">EPS</label>
+											<div class="col-lg-9">
+												<div>
+													<select name="id_eps" id="id_eps" class="form-control">
+
+
+													</select>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="form-group">
+											<input type="submit" value="Guardar" class="btn btn-primary">
+										</div>
+
+
+
+
+
+									</form>
+								</div>
+							</div>
+							<!-- /form user info -->
+
+						</div>
+
+
+
+					</div>
+					<!--/row-->
+
+
+				</div>
+				<!--/col-->
+			</div>
+
+		</div>
+		<!--/container-->
+
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Gatos Rugby Club</title>
+
+    <link rel="stylesheet" href="{{baseUrl}}/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{baseUrl}}/css/reports.min.css">
+    <script src='{{baseUrl}}/vendor/chart.js/Chart.min.js'></script>
+</head>
+<body>
+    <!-- Contenedor general del sitio -->
+    <header>
+        {% include 'partials/reportes/nav.twig' %}
+    </header>
+    <section id="reportes">
+        {% block reportes %}{% endblock %}
+        </section>
+        <footer>
+          <div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            {# <strong>Desarrollo del talento humano</strong> - todos los derechos reservados 2018 #}
+        </div>
+    </footer>
+    <script src="{{baseUrl}}/js/jquery-3.3.1.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+
+    <script src='{{baseUrl}}/js/reports/main.js'></script>
+
+</body>
+</html>

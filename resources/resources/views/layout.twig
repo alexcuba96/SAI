@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gatos Rugby Club</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta
+        name="robots" content="all,follow">
+
+        <!-- Bootstrap CSS-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome CSS-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/vendor/font-awesome/css/font-awesome.min.css">
+        <!-- Fontastic Custom icon font-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/css/fontastic.css">
+        <!-- Google fonts - Roboto -->
+        <link
+        rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <!-- jQuery Circle-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/css/grasp_mobile_progress_circle-1.0.0.min.css">
+        <!-- Custom Scrollbar-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+        <!-- theme stylesheet-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/css/style.default.css" id="theme-stylesheet">
+        <!-- Custom stylesheet - for your changes-->
+        <link
+        rel="stylesheet" href="{{baseUrl}}/css/custom.css">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <!-- Tweaks for older IEs-->
+
+        <link rel="stylesheet" href="{{baseUrl}}/css/sweetalert.css"> <link rel="stylesheet" href="{{baseUrl}}/css/main.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    </head>
+    <body>
+        {% block nav %}{% endblock %}
+        {% block users %}{% endblock %}
+        {% block updateusers %}{% endblock %}
+        {% block miembros %}{% endblock %}
+        {% block calendar %}{% endblock %}
+        {% block updatemember %}{% endblock %}
+        {% block inf_dep %}{% endblock %}
+        {% block pagos %}{% endblock %}
+
+
+        <input
+        type="hidden" name="baseurl" id="baseurl" class="baseurl" value="{{baseUrl}}">
+
+        <!-- JavaScript files-->
+        <script src="{{baseUrl}}/vendor/jquery/jquery.min.js"></script>
+        <script src="{{baseUrl}}/vendor/popper.js/umd/popper.min.js"></script>
+        <script src="{{baseUrl}}/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+        <script src="{{baseUrl}}/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+        <script src="{{baseUrl}}/vendor/jquery.cookie/jquery.cookie.js"></script>
+        <script src="{{baseUrl}}/vendor/chart.js/Chart.min.js"></script>
+        <script src="{{baseUrl}}/vendor/jquery-validation/jquery.validate.min.js"></script>
+        <script src="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="{{baseUrl}}/js/charts-home.js"></script>
+        <!-- Main File-->
+        <script src="{{baseUrl}}/js/front.js"></script>
+        <script src="{{baseUrl}}/js/sweetalert.js"></script>
+        <script type="text/javascript" language="Javascript" src="{{baseUrl}}/js/main.js"></script>
+        
+        
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+
+                $('#tableusu').DataTable();
+                $('#tableusu2').DataTable();
+                $('#tableMemberAct').DataTable();
+                $('#tableMemberInAct').DataTable();
+                $('#tableInfDep').DataTable();
+                $('#tablepagos').DataTable();
+                
+                
+            });
+        </script>
+
+    </body>
+</html>

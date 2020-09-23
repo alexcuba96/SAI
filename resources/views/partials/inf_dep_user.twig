@@ -1,0 +1,96 @@
+{% extends 'layout.twig' %}
+{% block inf_dep_users %}
+	{% include 'partials/NavUsers.twig' %}
+
+	<div class="container">
+		<div class="row">
+
+
+			<div class="col-md-7 ">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Información Deportiva</h4>
+					</div>
+					<div class="panel-body">
+
+						<div class="box box-info">
+
+							<div class="box-body">
+								<div class="col-sm-6">
+									<div align="center">
+										<img alt="User Pic" src="{{baseUrl}}/images/foto/{{foto}}" style="width: 30%;height: auto;">
+									</div>
+
+									<br>
+								</div>
+								<div class="col-sm-6">
+									<h4 style="color:green;">Gatos Rugby Club
+									</h4>
+								</span>
+							</div>
+							<div class="clearfix"></div>
+							<hr style="margin:5px 0 5px 0;">
+
+                            {% for data in dataInf %}
+
+							<div class="col-sm-5 col-xs-6 tital ">Fecha Inicio:</div>
+							<div class="col-sm-7 col-xs-6 ">{{data.fecha_inicio}}</div>
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+                            <div class="col-sm-5 col-xs-6 tital ">Nombre Completo:</div>
+							<div class="col-sm-7">{{data.nombres}}  {{data.apellidos}}</div>
+
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+                            <div class="col-sm-5 col-xs-6 tital ">Identificación:</div>
+							<div class="col-sm-7">{{data.identificacion}}</div>
+
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+							<div class="col-sm-5 col-xs-6 tital ">Posición:</div>
+							<div class="col-sm-7">
+								{{data.posicion}}</div>
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+							<div class="col-sm-5 col-xs-6 tital ">Categoria:</div>
+							<div class="col-sm-7">
+								{{data.categoria}}</div>
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+							<div class="col-sm-5 col-xs-6 tital ">Observaciones:</div>
+							<div class="col-sm-7">{{data.observaciones}}</div>
+
+							<div class="clearfix"></div>
+							<div class="bot-border"></div>
+
+							<div class="col-sm-5 col-xs-6 tital ">Estado:</div>
+							<div class="col-sm-7">{{data.status}}</div>
+                            {% endfor %}
+
+							<!-- /.box-body -->
+						</div>
+						<!-- /.box -->
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+$('#profile-image1').on('click', function () {
+$('#profile-image-upload').click();
+});
+});
+		</script>
+
+
+	</div>
+</div>{% endblock %}

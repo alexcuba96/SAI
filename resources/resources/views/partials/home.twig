@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+{% block nav %}
+
+	{% if group_id == 1 %}
+			{% include 'partials/nav.twig' %}
+
+        {% else %}
+    
+		{% include 'partials/NavUsers.twig' %}
+
+	{% endif %}
+		  
+	
+{% endblock %}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="all,follow">
+		<title>Registrarse</title>
+
+		<!-- Bootstrap CSS-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/vendor/bootstrap/css/bootstrap.min.css">
+		<!-- Font Awesome CSS-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/vendor/font-awesome/css/font-awesome.min.css">
+		<!-- Fontastic Custom icon font-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/css/fontastic.css">
+		<!-- Google fonts - Roboto -->
+		<link
+		rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+		<!-- jQuery Circle-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/css/grasp_mobile_progress_circle-1.0.0.min.css">
+		<!-- Custom Scrollbar-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+		<!-- theme stylesheet-->
+		<link
+		rel="stylesheet" href="{{baseUrl}}/css/style.default.css" id="theme-stylesheet">
+		<!-- Custom stylesheet - for your changes-->
+		<link rel="stylesheet" href="{{baseUrl}}/css/custom.css">
+		<link rel="stylesheet" href="{{baseUrl}}/css/sweetalert.css">
+	<!-- Favicon
+			<link rel="shortcut icon" href="img/favicon.ico">-->
+		<!-- Tweaks for older IEs-->
+		<!--[if lt IE 9]>
+				        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+				        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+	</head>
+	<body>
+		<div class="page login-page">
+			<div class="container">
+				<div class="form-outer text-center d-flex align-items-center">
+					<div class="form-inner">
+						<div class="logo text-uppercase">
+							<span>REGISTRARSE</span>&nbsp;<strong class="text-primary">GRC</strong>
+						</div>
+						<form id="frmRegistrarse">
+							<div class="form-group-material">
+								<input id="login-username" type="text" v-name="Usuario" v-only="text" name="username" class="input-material">
+								<label for="login-username" class="label-material">Nombre Usuario</label>
+							</div>
+							<div class="form-group-material">
+								<input type="text" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="input-material">
+								<label for="cedula" class="label-material">Documento Identidad</label>
+							</div>
+
+							<div class="form-group-material">
+								<input id="email" type="text" v-name="E-mail" v-only="email" name="email" class="input-material">
+								<label for="email" class="label-material">E-Mail</label>
+							</div>
+
+							<div class="form-group-material">
+								<input id="password" type="password" v-name="Clave" name="password" class="input-material">
+								<label for="password" class="label-material">Clave</label>
+							</div>
+							<div class="form-group-material">
+								<input id="passwordConfirm" type="password" v-name="Confirmar Clave" v-only="confirmar" name="passwordConfirm" class="input-material">
+								<label for="passwordConfirm" class="label-material">Confirmar Clave</label>
+							</div>
+
+							<div class="form-group-material">
+								<select name="group_id" id="group_id" class="form-control" v-name="Perfil">
+									<option value="">Seleccione Perfil</option>
+									<option value="2">Jugador</option>
+									<option value="3">Miembro</option>
+								</select>
+							</div>
+
+							<div class="form-group-material">
+								<input id="foto" type="file" v-name="Foto" v-only="file" id="foto" name="foto" class="input-material" style="padding: 40px 0px 0px !important;">
+								<label for="foto" class="label-material">Foto</label>
+							</div>
+
+
+							<div class="form-group text-center">
+								<button id="login" type="submit" class="btn btn-primary">Registrarse</button>
+							</div>
+						</form>
+
+						<small>Ya esta registrado?
+						</small>
+						<a href="{{baseUrl}}/auth" class="signup">Inicia Sesión</a>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- JavaScript files-->
+		<script src="{{baseUrl}}/vendor/jquery/jquery.min.js"></script>
+		<script src="{{baseUrl}}/vendor/popper.js/umd/popper.min.js"></script>
+		<script src="{{baseUrl}}/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="{{baseUrl}}/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+		<script src="{{baseUrl}}/vendor/jquery.cookie/jquery.cookie.js"></script>
+		<script src="{{baseUrl}}/vendor/chart.js/Chart.min.js"></script>
+		<script src="{{baseUrl}}/vendor/jquery-validation/jquery.validate.min.js"></script>
+		<script src="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- Main File-->
+		<script src="{{baseUrl}}/js/front.js"></script>
+		<script src="{{baseUrl}}/js/sweetalert.js"></script>
+
+		<script type="text/javascript" language="Javascript">
+			jQuery(document).ready(function () { /*Formulario Registrar Usuario*/
+$('#frmRegistrarse').submit(function () {
+
+var cedula = $("#cedula").val();
+
+
+var formData = new FormData($(this)[0]);
+var error = false;
+var mensaje = '';
+validarcampos = validarCamposReg('#frmRegistrarse', error, mensaje);
+mensaje = validarcampos.mensaje;
+error = validarcampos.error;
+
+if (error) {
+swal({
+title: "Error",
+text: mensaje,
+type: "error",
+confirmButtonClass: 'btn-danger',
+confirmButtonText: 'OK'
+});
+
+// alert(mensaje);
+// createAlert('Atención', mensaje);
+} else {
+console.log(formData);
+$.ajax({
+type: 'POST',
+url: "{{ baseUrl }}" + '/reg/registrarLogin',
+data: formData,
+async: false,
+cache: false,
+contentType: false,
+enctype: 'multipart/form-data',
+processData: false,
+success: function (response) {
+if (response.status) {
+
+
+swal({
+title: "Exito",
+text: "Usuario Registrado Correctamente",
+type: "success",
+confirmButtonClass: 'btn-succes',
+confirmButtonText: 'OK'
+});
+location.reload();
+
+} else {
+
+swal({
+title: "Error",
+text: response.message,
+type: "error",
+confirmButtonClass: 'btn-danger',
+confirmButtonText: 'OK'
+});
+}
+},
+error: function (response) {
+console.log(JSON.stringify(response));
+
+swal({
+title: "Error",
+text: response.message,
+type: "error",
+confirmButtonClass: 'btn-danger',
+confirmButtonText: 'OK'
+});
+},
+dataType: 'json'
+})
+}
+return false;
+});
+
+// Funcion para validar los campos de los formularios
+function validarCamposReg(form, error, mensaje) {
+var banderaRadio = true;
+// Valido si los campos que no sean botones, checkbox o radio buttons NO estén vación, y que tengan los carácteres mínimos
+$(form + ' input,' + form + ' select,' + form + ' textarea').not('.novalidate, input[type=button], input[type=reset], input[type=submit], input[type=radio]').each(function () {
+
+var nombre = $(this).attr('v-name');
+var name = $(this).attr('name')
+
+// mensaje+='nombre es '+nombre.length;
+var minLenght = $(this).attr('v-min');
+
+if ($(this).val().trim() == '') {
+error = true;
+mensaje += 'El campo ' + nombre + ' es obligatorio \n';
+$(this).focus();
+} else {
+	if ($(this).val().length < minLenght) {
+		error = true;
+		mensaje += 'El campo ' + nombre + ' debe tener mínimo ' + minLenght + ' caracteres \n';
+		$(this).focus();
+	}
+
+	if ($(this).attr('v-only') == 'text') {
+		var regex = /^[a-z A-Záéíóúñ]+$/;
+
+		if (! regex.test($(this).val())) {
+			error = true;
+			mensaje += 'El campo ' + nombre + ' solo puede contener texto \n';
+			$(this).focus();
+		} else {
+			$(this).focus();
+		}
+	}
+
+	if ($(this).attr('v-only') == 'number') {
+		if (isNaN($(this).val().trim())) {
+			error = true;
+			mensaje += 'El campo ' + nombre + ' debe ser numérico \n';
+			$(this).focus();
+		}
+
+	}
+
+	if ($(this).attr('v-only') == 'confirmar') {
+		if($(this).val() != $('#password').val()){
+			error = true;
+			mensaje += 'La confirmación clave no coinciden \n';
+			$(this).focus();
+		}
+		
+
+	}
+
+	if ($(this).attr('v-only') == 'email') {
+	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+	if (! regex.test($(this).val())) {
+	error = true;
+	mensaje += 'Por favor ingrese un Correo Electrónico válido \n';
+	$(this).focus();
+	} else {
+	$(this).focus();
+	}
+	}
+	if ($(this).attr('v-only') == 'file') {
+	/*var fileInput = document.getElementById('customFileLangProteccion');
+						var fileInput = document.getElementById('customFileLangFactura');*/
+	// var filePath = fileInput.value;
+	var filePath = $(this).val();
+	var allowedExtensions = /(.jpg|.jpeg|.png)$/i;
+	if (! allowedExtensions.exec(filePath)) {
+	error = true;
+	mensaje += ' Solo se admiten las siguientes extensiones: jpeg/jpg/png \n';
+	$(this).focus();
+	} else {
+	$(this).focus();
+	}
+	}
+
+	var radio = $(this).attr('v-checkbox');
+	if (banderaRadio == true) {
+	var radioLast = '';
+	banderaRadio = false;
+	}
+	if (radio) {
+	if (radio != radioLast) {
+	if (!$(this).prop('checked')) {
+	error = true;
+	mensaje += '' + $(this).attr('v-checkbox') + ' es obligatorio \n';
+	radioLast = radio;
+	}
+	}
+	}
+	/*if( !$(form+' input[type=radio]:checked').attr('v-radio')){
+						error=true;
+						mensaje+='<div>radio '+$(form+' input[type=radio]').attr('v-radio')+' obligatorio</div>';
+					}*/
+}
+});
+
+var arrError = {
+error: error,
+mensaje: mensaje
+};
+return arrError;
+} /*Fin funcion para validar los campos de un formulario*/
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,237 @@
+@font-face{
+    font-family:"fontBlack";
+    src:url(../fonts/HelveticaNeueLTStd-BlkCnO.otf)
+}
+@font-face{
+    font-family:"fontMedium";
+    src:url(../fonts/Helvetica-Neue-LT-Std-67-Medium-Condensed-Oblique_22534.ttf)
+}
+@font-face{
+    font-family:"fontHeavy";
+    src:url(../fonts/HelveticaNeueLTStd-HvCnO.otf)
+}
+@font-face{
+    font-family:"fontLight";
+    src:url(../fonts/HelveticaNeueLTStd-LtCnO_0.otf)
+}
+body{
+    background:url(../img/background_MANGA.jpg);
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-color:#000;
+    position:relative
+}
+body .cerrarSesion a{
+    float:right;
+    color:#F24B2A;
+    cursor:pointer;
+    position:relative;
+    top:-2rem;
+    font-weight:bold;
+    margin-right:2rem
+}
+body .cerrarSesion a:hover{
+    text-shadow:1px 1px 41px #F24B2A
+}
+body footer{
+    background:url(../img/fondo_premios.jpg);
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    position:absolute;
+    bottom:0rem;
+    z-index:-1;
+    height:10rem;
+    width:100%
+}
+body section#reportes .container-fluid #reporte{
+    background-color:#fff;
+    width:100%;
+    min-height:80vh;
+    margin:30px 0px;
+    border-radius:.3rem;
+    padding:1rem
+}
+body section#reportes .container-fluid #reporte .info-cons{
+    padding-bottom:1rem;
+    border:1px solid;
+    border-radius:5px;
+    background-color:#083a07
+}
+body section#reportes .container-fluid #reporte .info-cons div{
+    border-right:1px solid #fff
+}
+body section#reportes .container-fluid #reporte .info-cons div .bord div{
+    border:0
+}
+body section#reportes .container-fluid #reporte h1{
+    font-size:18px;
+    text-align:center;
+    color:#fff;
+    padding-top:1rem;
+    font-family:"fontLight"
+}
+body section#reportes .container-fluid #reporte h2{
+    font-size:18px;
+    text-align:center;
+    color:#fff;
+    padding-top:1rem;
+    padding:0;
+    margin:0;
+    font-family:"fontMedium"
+}
+body section#reportes .container-fluid #reporte h3{
+    font-size:40px;
+    text-align:center;
+    color:#fff;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    padding-top:1rem
+}
+body section#reportes .container-fluid #reporte hr{
+    width:95%;
+    background-color:#fff;
+    margin-bottom:1.5rem
+}
+body section#reportes .container-fluid #reporte .UnaPre h4{
+    padding-top:1rem;
+    font-size:40px;
+    text-align:center;
+    color:#ffc107;
+    font-family:"fontHeavy";
+    font-weight:bold
+}
+body section#reportes .container-fluid #reporte .UnaPre h5{
+    text-align:center;
+    padding-left:3rem;
+    padding-bottom:2rem;
+    font-size:30px;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    color:#c39302
+}
+body section#reportes .container-fluid #reporte .DosPre h4{
+    padding-top:1rem;
+    font-size:40px;
+    text-align:center;
+    color:#ffc107;
+    font-family:"fontHeavy";
+    font-weight:bold
+}
+body section#reportes .container-fluid #reporte .DosPre h5{
+    text-align:center;
+    padding-left:3rem;
+    font-size:30px;
+    padding-bottom:2rem;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    color:#c39302
+}
+body section#reportes .container-fluid #reporte .title-city{
+    display:flex;
+    justify-content:center;
+    padding-top:3rem;
+    padding-bottom:2rem
+}
+body section#reportes .container-fluid #reporte .title-city h4{
+    font-size:40px;
+    color:#ffc107;
+    font-family:"fontHeavy";
+    font-weight:bold
+}
+body section#reportes .container-fluid #reporte .title-city h5{
+    font-size:28px;
+    padding-top:.7rem;
+    padding-left:1rem;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    color:#c39302
+}
+body section#loginAdmin{
+    background-color:#fff;
+    width:80%;
+    padding:3rem;
+    margin:0 auto;
+    font-family:AkzidGroProBolCndIta
+}
+body section#loginAdmin .is-center{
+    text-align:center !important
+}
+body section#loginAdmin form{
+    width:35%;
+    margin:0 auto
+}
+body section#loginAdmin form label{
+    font-size:1.4rem
+}
+body section#loginAdmin form button{
+    background-color:#000;
+    border:none;
+    width:100%;
+    padding:.5rem 0rem;
+    color:#fff;
+    font-weight:bold;
+    margin:0 auto;
+    margin-top:1rem
+}
+body .button-footer{
+    display:flex;
+    float:right;
+    padding-bottom:4rem;
+    padding-top:2rem
+}
+body .button-footer button{
+    background:#083a07;
+    font-weight:bold;
+    font-size:15px;
+    border:0px;
+    color:#fff;
+    border-radius:10px;
+    font-family:"fontHeavy";
+    padding:3px 16px
+}
+.oculta{
+    display:none
+}
+.table thead th{
+    border-bottom:0
+}
+.table td,.table th{
+    border-top:0
+}
+th{
+    font-size:28px;
+    padding-top:.7rem;
+    padding-left:1rem;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    color:#c39302
+}
+tr{
+    font-size:15px;
+    padding-top:.7rem;
+    padding-left:1rem;
+    font-family:"fontHeavy";
+    font-weight:bold;
+    color:grey
+}
+@media (max-width: 575px){
+    .container-fluid section{
+        padding:0
+    }
+}
+@media (max-width: 767px){
+    .container-fluid section{
+        padding:0 2rem !important
+    }
+}
+section#reportes .container-fluid section{
+    padding:0 2rem
+}
+section#reportes .container-fluid section{
+    padding:0 8rem
+}
+section#reportes .container-fluid section{
+    padding:0 8rem
+}
+/*# sourceMappingURL=reports.min.css.map */
+ 

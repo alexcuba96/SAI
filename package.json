@@ -1,0 +1,26 @@
+{
+  "name": "SampleGrunt",
+  "version": "0.1.0",
+  "author": "Julian Henao",
+  "private": true,
+  "devDependencies": {
+    "grunt-banner": "*",
+    "grunt-cache-control": "^0.2.5",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-cssc": "*",
+    "grunt-file-hash": "*",
+    "grunt-htmlhint": "*",
+    "grunt-processhtml": "^0.4.2",
+    "grunt-writefile": "*",
+    "matchdep": "*"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}

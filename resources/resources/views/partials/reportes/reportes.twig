@@ -1,0 +1,128 @@
+{% extends 'partials/reportes/layout.twig' %}
+
+{% block reportes %}
+
+	<div id="fondo1">
+		<div id="fondo2">
+			<div id="fondo3">
+				<div class="container-fluid">
+					<section>
+						<section id="reporte">
+
+							<div class="info-cons">
+								<h1>CONSOLIDACIÓN DE INFORMES GATOS RUGBY CLUB</h1>
+								<span class="cerrarSesion">
+									<a href="{{baseUrl}}/home">SALIR</a>
+								</span>
+								<hr>
+								<div class="row">
+
+
+
+									<div class="bord col-lg-2 col-sm-6">
+										<div>
+											<h2>TOTAL</h2>
+										</div>
+										<div>
+											<h2>USUARIOS</h2>
+										</div>
+										<h3 id="total_reg"></h3>
+									</div>
+
+									<div class="bord col-lg-2 col-sm-6">
+										<div>
+											<h2>TOTAL</h2>
+										</div>
+										<div>
+											<h2>USUARIOS ACTIVOS</h2>
+										</div>
+										<h3 id="total_reg_act"></h3>
+									</div>
+
+									<div class="bord col-lg-2 col-sm-6">
+										<div>
+											<h2>TOTAL USUARIOS</h2>
+										</div>
+										<div>
+											<h2>INACTIVOS</h2>
+										</div>
+										<h3 id="total_reg_inact"></h3>
+									</div>
+
+
+									<div class="bord col-lg-2 col-sm-6">
+										<div>
+											<h2>TOTAL</h2>
+										</div>
+										<div>
+											<h2>MIEMBROS</h2>
+										</div>
+										<h3 id="total_reg_member"></h3>
+									</div>
+
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="UnaPre col-md-6">
+									<div>
+										<h4>REGISTROS
+										</h4>
+									</div>
+									<div>
+										<h5>USUARIOS</h5>
+									</div>
+									<canvas id="reportRegUsu"></canvas>
+								</div>
+
+							</div>
+
+
+
+							<div class="row">
+								<div class="title-city col-md-12">
+									<h4>REGISTROS USUARIOS</h4>
+									<h5>POR DIA</h5>
+								</div>
+								<div class=" col-md-12">
+									<canvas id="reportUserDias"></canvas>
+								</div>
+
+							</div>
+
+
+							<div class="row">
+								<div class="title-city col-md-12">
+									<h4>REGISTROS DE</h4>
+									<h5>PAGOS</h5>
+								</div>
+								<div class=" col-md-12">
+									<canvas id="reportsPagos"></canvas>
+								</div>
+
+							</div>
+
+
+							<div class="button-footer">
+								<a href="{{baseUrl}}/public/excel/excelAdmin.php">
+									<button style="cursor:pointer">DESCARGA REPORTE USUARIOS</button>
+								</a>
+							</div>
+
+
+
+						</div>
+
+
+
+					</section>
+
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

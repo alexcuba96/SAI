@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all,follow">
+	<title>Sign In</title>
+
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="{{baseUrl}}/vendor/bootstrap/css/bootstrap.min.css">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="{{baseUrl}}/vendor/font-awesome/css/font-awesome.min.css">
+	<!-- Fontastic Custom icon font-->
+	<link rel="stylesheet" href="{{baseUrl}}/css/fontastic.css">
+	<!-- Google fonts - Roboto -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<!-- jQuery Circle-->
+	<link rel="stylesheet" href="{{baseUrl}}/css/grasp_mobile_progress_circle-1.0.0.min.css">
+	<!-- Custom Scrollbar-->
+	<link rel="stylesheet" href="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="{{baseUrl}}/css/style.default.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="{{baseUrl}}/css/custom.css">
+	<!-- Favicon
+	<link rel="shortcut icon" href="img/favicon.ico">-->
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    </head>
+    <body>
+
+    	<div class="page login-page">
+    		{% if dotenv %}
+    			<div class="notification">
+    				<h4>Environment Variables no settings</h4>
+    			</div>
+    		{% endif %}
+
+    		<div class="container">
+    			<div class="form-outer text-center d-flex align-items-center">
+    				<div class="form-inner">
+    					<div class="logo text-uppercase"><span>INICIO DE SESIÓN </span>&nbsp;<strong class="text-primary">GRC</strong></div>
+    					<form action="auth" id="frmSignin" method="POST" class="text-left form-validate">
+    						{{ csrf_field() | raw }}
+    						<div class="form-group-material">
+    							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material">
+    							<label for="login-username" class="label-material">E-Mail</label>
+    						</div>
+    						<div class="form-group-material">
+    							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material">
+    							<label for="login-password" class="label-material">Clave</label>
+    						</div>
+    						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Login</button>
+    							<!-- This should be submit button but I replaced it with <a> for demo purposes-->
+    						</div>
+    					</form>
+						<small>No tienes una cuenta? </small>
+						<a href="{{baseUrl}}/reg/registrarRed" class="signup">Registrate</a>
+						</br>
+						<small>¿Olvidaste contraseña? contacte a los administradores</small>
+						</br><small><b>administracion@gatosrugby.com.co</b></small>
+
+    					{% if flash.getMessages('error') %}
+    						<div class="authFailed">
+    							{{ flash.getMessage('error') | first }}
+    						</div>
+    					{% endif %}
+
+    				</div>
+
+    			</div>
+    		</div>
+    	</div>
+
+
+    	<!-- JavaScript files-->
+    	<script src="{{baseUrl}}/vendor/jquery/jquery.min.js"></script>
+    	<script src="{{baseUrl}}/vendor/popper.js/umd/popper.min.js"> </script>
+    	<script src="{{baseUrl}}/vendor/bootstrap/js/bootstrap.min.js"></script>
+    	<script src="{{baseUrl}}/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    	<script src="{{baseUrl}}/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    	<script src="{{baseUrl}}/vendor/chart.js/Chart.min.js"></script>
+    	<script src="{{baseUrl}}/vendor/jquery-validation/jquery.validate.min.js"></script>
+    	<script src="{{baseUrl}}/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    	<!-- Main File-->
+    	<script src="{{baseUrl}}/js/front.js"></script>
+    </body>
+    </html>

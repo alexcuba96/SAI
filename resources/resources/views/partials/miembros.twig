@@ -1,0 +1,293 @@
+{% extends 'layout.twig' %}
+{% block miembros %}
+	{% include 'partials/nav.twig' %}
+	<section>
+		<div class="container-fluid">
+
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#home">Miembros Activos</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu1">Miembros Inactivos</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="home" class="container tab-pane active"><br>
+					<div class="row">
+
+						<div class="col-lg-12 col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h4>Gestión Miembros</h4>
+
+								</div>
+
+
+								<div class="card-body">
+									<a id="btn_editar" class="btn btn-primary float-left" data-toggle="modal" href="#myModal">Crear
+									</a>
+									<div class="table-responsive">
+										<br/>
+										<table class="table table-striped table-hover" id="tableMemberAct">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Nombres</th>
+													<th>Apellidos</th>
+													<th>Identificación</th>
+													<th>Telefono</th>
+													<th>Dirección</th>
+													<th>Fecha Nacimiento</th>
+													<th>EPS</th>
+													<th>Estado</th>
+													{% if group_id == 1 %}
+													<th>Acciones</th>
+													{% endif %}
+												</tr>
+											</thead>
+											<tbody>
+
+												{% for data in miembros %}
+													{% if data.id_estado == 1 %}
+														<tr class="active">
+
+															<td id="idUsu">{{data.id}}</td>
+															<td>{{data.nombres}}</td>
+															<td>{{data.apellidos}}</td>
+															<td>{{data.identificacion}}</td>
+															<td>{{data.telefono}}</td>
+															<td>{{data.direccion}}</td>
+															<td>{{data.fecha_nacm}}</td>
+															<td>{{data.eps}}</td>
+
+															{% if data.id_estado == 1 %}
+																<td>Activo</td>
+															{% else %}
+																<td>Inactivo</td>
+															{% endif %}
+
+															{% if group_id == 1 %}
+															<td>
+																<a href="{{baseUrl}}/membereditview/{{data.id}}" id="btn_editarusu" class="btn btn-primary">
+																	<i class="fa fa-pencil" aria-hidden="true"></i>
+																</a>
+
+																<button type="button" onclick="deleteMiembros({{data.identificacion}});" id="btn_deleteusu" class="btn btn-primary">
+																	<i class="fa fa-trash-o" aria-hidden="true"></i>
+																</button>
+															</td>
+															{% endif %}
+
+														</tr>
+													{% endif %}
+												{% endfor %}
+
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div id="menu1" class="container tab-pane fade"><br>
+					<div class="row">
+
+						<div class="col-lg-12 col-md-12">
+							<div class="card">
+
+								<div
+									class="card-body">
+									<!--<a id="btn_editar" class="btn btn-primary float-left" data-toggle="modal" href="#myModal">Crear
+																																																			</a>-->
+									<div class="table-responsive">
+										<table class="table table-striped table-hover" id="tableMemberInAct">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Nombres</th>
+													<th>Apellidos</th>
+													<th>Identificación</th>
+													<th>Telefono</th>
+													<th>Dirección</th>
+													<th>Fecha Nacimiento</th>
+													<th>EPS</th>
+													<th>Estado</th>
+													{% if group_id == 1 %}
+													<th>Acciones</th>
+													{% endif %}
+												</tr>
+											</thead>
+											<tbody>
+
+												{% for data in miembros %}
+													{% if data.id_estado == 2 %}
+														<tr class="active">
+
+															<td id="idUsu">{{data.id}}</td>
+															<td>{{data.nombres}}</td>
+															<td>{{data.apellidos}}</td>
+															<td>{{data.identificacion}}</td>
+															<td>{{data.telefono}}</td>
+															<td>{{data.direccion}}</td>
+															<td>{{data.fecha_nacm}}</td>
+															<td>{{data.eps}}</td>
+
+															{% if data.id_estado == 1 %}
+																<td>Activo</td>
+															{% else %}
+																<td>Inactivo</td>
+															{% endif %}
+
+															{% if group_id == 1 %}
+															<td>
+																<a href="{{baseUrl}}/membereditview/{{data.id}}" id="btn_editarusu" class="btn btn-primary">
+																	<i class="fa fa-pencil" aria-hidden="true"></i>
+																</a>
+
+																<!--<button type="button" onclick="deleteMiembros({{data.identificacion}});" id="btn_deleteusu" class="btn btn-primary">
+																																																																																																					<i class="fa fa-trash-o" aria-hidden="true"></i>
+																																																																																																				</button>-->
+															</td>
+															{% endif %}
+
+														</tr>
+													{% endif %}
+												{% endfor %}
+
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div><!-- Modal--><div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+		<div role="document" class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="exampleModalLabel" class="modal-title">Crear Miembro</h5>
+					<button type="button" data-dismiss="modal" aria-label="Close" class="close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="frmAddMembers">
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label>Nombres</label><input type="text" placeholder="Nombres" v-name="Nombres" v-only="text" v-min="3" name="nombres" class="form-control"></div>
+							<div class="form-group col-md-6">
+								<label>Apellidos</label><input type="text" placeholder="Apellidos" v-name="Apellidos" v-only="text" v-min="3" name="apellidos" id="apellidos" class="form-control"></div>
+						</div>
+
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label class="form-control-label">Tipo Documento</label>
+								<div>
+									<select name="id_tipo_doc" id="id_tipo_doc" class="form-control"></select>
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<label>Identificación</label><input type="text" placeholder="Identificación" v-name="Identificación" v-only="number" v-min="3" v-max="11" name="identificacion" id="identificacion" class="form-control"></div>
+
+						</div>
+
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label>Telefono</label><input type="text" placeholder="Telefono" v-name="Telefono" v-only="number" v-min="3" v-max="10" name="telefono" class="form-control"></div>
+							<div class="form-group col-md-6">
+								<label>Dirección</label><input type="text" placeholder="Dirección" v-name="Dirección" name="direccion" class="form-control"></div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label>E-Mail</label><input type="text" placeholder="E-Mail" v-name="E-Mail" v-only="email" name="email" class="form-control"></div>
+							<div class="form-group col-md-6">
+								<label>Fecha Nacimiento</label><input type="date" placeholder="Fecha Nacimiento" v-name="Fecha Nacimiento" name="fecha_nacm" class="form-control"></div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label class="form-control-label">Estado</label>
+								<div>
+									<select name="id_estado" id="id_estado" class="form-control"></select>
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<label class="form-control-label">EPS</label>
+								<div>
+									<select name="id_eps" id="id_eps" class="form-control"></select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group"><input type="submit" value="Guardar" class="btn btn-primary"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function deleteMiembros(id) {
+var baseUrl = document.getElementById('baseurl').value;
+
+swal({
+title: "Esta Seguro?",
+text: "Que quieres eliminar este registro!",
+type: "warning",
+showCancelButton: true,
+confirmButtonClass: "btn-danger",
+confirmButtonText: "Si",
+cancelButtonText: "No",
+closeOnConfirm: false,
+closeOnCancel: false
+}, function (isConfirm) {
+if (isConfirm) {
+$.ajax({
+type: 'GET',
+url: baseUrl + '/miembrosDelete/' + id,
+success: function (response) {
+if (response.status) {
+swal({
+title: "Exito",
+text: response.message,
+type: "success",
+confirmButtonClass: 'btn-succes',
+confirmButtonText: 'OK'
+});
+location.reload();
+} else {
+swal({
+title: "Error",
+text: response.message,
+type: "error",
+confirmButtonClass: 'btn-danger',
+confirmButtonText: 'OK'
+});
+}
+},
+error: function (response) {
+console.log("Error al eliminar el miembro del equipo" + response);
+},
+dataType: 'json'
+})
+} else {
+swal("Cancelado", "Tu registro esta guardado", "error");
+}
+});
+console.log("ID: " + id);
+}
+</script>{% endblock %}

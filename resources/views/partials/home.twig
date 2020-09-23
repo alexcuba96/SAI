@@ -1,0 +1,20 @@
+{% extends 'layout.twig' %}
+{% block nav %}
+{% if status == 1 %}
+
+	{% if group_id == 1 %}
+			{% include 'partials/nav.twig' %}
+
+        {% else %}
+    
+		{% include 'partials/NavUsers.twig' %}
+
+	{% endif %}
+
+{% else %}
+    
+		{% include 'partials/inactivo.twig' %}
+{% endif %}
+		  
+	
+{% endblock %}

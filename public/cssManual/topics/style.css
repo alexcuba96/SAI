@@ -1,0 +1,145 @@
+p {
+  margin: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  text-indent: 0;
+  text-align: left;
+  line-height: normal;
+  font-family: 'Times New Roman';
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+map > area {
+  outline: none;
+}
+table.align-c {
+  margin: 0 auto;
+}
+table.align-r {
+  margin: 0 0 0 auto;
+}
+img {
+  border: none;
+}
+.float-pos-l {
+  float: left;
+}
+.float-pos-r {
+  float: right;
+}
+.ts0 {
+  font-family: Arial;
+}
+.ts1 {
+  font-family: Tahoma;
+  font-size: 20pt;
+  font-weight: bold;
+  color: #92d050;
+}
+.ts2 {
+  font-family: Tahoma;
+}
+.ts3 {
+  font-family: Tahoma;
+  font-size: 12pt;
+}
+.ts4 {
+  font-family: Tahoma;
+}
+.ts5 {
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.ts6 {
+  font-family: Tahoma;
+  font-size: 20pt;
+  font-weight: bold;
+}
+.ts7 {
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.ts8 {
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.ts9 {
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.ts10 {
+  font-family: Tahoma;
+  font-weight: bold;
+  color: #92d050;
+}
+.ts11 {
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.ts12 {
+  font-family: Tahoma;
+  font-weight: bold;
+  color: #92d050;
+}
+.ts13 {
+  font-family: 'Courier New';
+}
+.ts14 {
+  font-family: Tahoma;
+}
+.hs0 {
+  font-family: Tahoma;
+  text-decoration: underline;
+  color: Blue;
+}
+.hs1 {
+  font-family: Tahoma;
+  font-weight: bold;
+  text-decoration: underline;
+  color: Blue;
+}
+.ps0 {
+  text-align: center;
+}
+.ps1 {
+  text-align: center;
+  font-size: 11pt;
+}
+.ps2 {
+  text-align: justify;
+  font-size: 11pt;
+}
+.ps3 {
+  text-align: justify;
+}
+.ps4 {
+  padding-left: 36.75pt;
+  text-align: justify;
+}
+.ps5 {
+  font-size: 11pt;
+}
+.ps6 {
+  padding-left: 36.75pt;
+  font-size: 11pt;
+}
+.ps7 {
+  padding-left: 36.75pt;
+}
+.ps8 {
+  font-size: 10pt;
+}
+.ps9 {
+  padding-left: 36.75pt;
+  text-align: center;
+}
+.hs-mobile img.hs-fullwidth-m {
+  width: 100%;
+  height: auto;
+  float: none;
+}
