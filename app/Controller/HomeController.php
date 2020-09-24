@@ -63,7 +63,6 @@ class HomeController extends Controller
 
 		return $this->view->render($response, 'partials/users1.twig',[
 			"users" => $data
-
 		]);
 	}
 
@@ -106,13 +105,11 @@ class HomeController extends Controller
 			$status = trim(strip_tags($data['id_estado']));
 			$password = strip_tags($data['password']);
 
-			//$password = password_hash($password, PASSWORD_DEFAULT);
 			$existe = User::select('password')->where('password',$password)->get();
 			if(count($existe) <= 0){
 				$password = password_hash($password, PASSWORD_DEFAULT);
 			}
 
-            //$ip = trim(strip_tags($data['ip']));
 			if (isset($_SERVER["HTTP_CLIENT_IP"])){
 				$ip = $_SERVER["HTTP_CLIENT_IP"];
 			}
@@ -209,7 +206,6 @@ class HomeController extends Controller
 				}
 			}
 
-            //$ip = trim(strip_tags($data['ip']));
 			if (isset($_SERVER["HTTP_CLIENT_IP"])){
 				$ip = $_SERVER["HTTP_CLIENT_IP"];
 			}
@@ -315,7 +311,6 @@ class HomeController extends Controller
 				}
 			}
 
-            //$ip = trim(strip_tags($data['ip']));
 			if (isset($_SERVER["HTTP_CLIENT_IP"])){
 				$ip = $_SERVER["HTTP_CLIENT_IP"];
 			}
@@ -412,7 +407,6 @@ class HomeController extends Controller
 					'status' => '2'
 				]);
 				DB::commit();
-				//$datosUserDelete = User::where('id','=',$args['id'])->delete();
 
 				$respuesta = ["status" => true, "message" => "Usuario inactivo correctamente"];
 				
@@ -454,8 +448,6 @@ class HomeController extends Controller
 				]);
 				DB::commit();
 
-				//$datosMiembrosDelete = Miembros::where('identificacion','=',$args['id'])->delete();
-
 				$respuesta = ["status" => true, "message" => "Miembro inactivo correctamente"];
 				
 			}else{
@@ -495,8 +487,6 @@ class HomeController extends Controller
 					'status' => '2'
 				]);
 				DB::commit();
-
-				//$datosMiembrosDelete = Miembros::where('identificacion','=',$args['id'])->delete();
 
 				$respuesta = ["status" => true, "message" => "Información inactivada correctamente"];
 				
@@ -568,7 +558,6 @@ class HomeController extends Controller
 			$password = trim(strip_tags($data['clave']));
 			$password = password_hash($password, PASSWORD_DEFAULT);
 
-            //$ip = trim(strip_tags($data['ip']));
 			if (isset($_SERVER["HTTP_CLIENT_IP"])){
 				$ip = $_SERVER["HTTP_CLIENT_IP"];
 			}
