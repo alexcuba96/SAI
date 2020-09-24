@@ -47,11 +47,11 @@
     					<form action="auth" id="frmSignin" method="POST" class="text-left form-validate">
     						{{ csrf_field() | raw }}
     						<div class="form-group-material">
-    							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material">
+    							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material" title="Por favor ingresa un usuario">
     							<label for="login-username" class="label-material">Correo Electrónico</label>
     						</div>
     						<div class="form-group-material">
-    							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material">
+    							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material" title="Por favor ingresa la clave">
     							<label for="login-password" class="label-material">Clave</label>
     						</div>
     						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Ingresar</button>
@@ -66,14 +66,14 @@
 						</br>
 							<a href="{{baseUrl}}/getManual" class="signup" target="_blank" text-align: right>Ayudas</a>
 						</br>
+						<br/>
+						<a href="https://www.gatosrugby.com.co/GRC/"   class="signup" >Gatos Rugby Club</a>
     					{% if flash.getMessages('error') %}
     						<div class="authFailed">
     							{{ flash.getMessage('error') | first }}
     						</div>
     					{% endif %}
-
     				</div>
-
     			</div>
     		</div>
     	</div>

@@ -20,7 +20,7 @@ class AuthController extends Controller
 		if($auth){
 			return $response->withRedirect($this->router->pathFor('home'));
 		}else{
-			$this->flash->addMessage('error','Error de inicio de sesión; Usuario o contraseña invalidos');
+			$this->flash->addMessage('error','Error: Usuario o contraseña inválidos');
 			return $response->withRedirect($this->router->pathFor('signin'));
 		}
 	}

@@ -17,7 +17,7 @@ class SendEmailMemberController extends Controller
 
 
 
-        $url="http://www.gatosrugby.com.co/GRC/";
+        $url="https://www.gatosrugby.com.co/GRC/";
         $imagen = "https://scontent.feoh4-2.fna.fbcdn.net/v/t1.0-9/81006602_2604729209574305_6698650403245916160_n.png?_nc_cat=111&_nc_sid=8024bb&_nc_eui2=AeE7_utBh40_NDEeyrdfun2vo15f7nWKQ_ujXl_udYpD--AwGvnYqE9JgnC9pzgyonSW2XFrrSTeagITiohLl5aL&_nc_ohc=76gYGgOJP8sAX_mZ0JJ&_nc_ht=scontent.feoh4-2.fna&oh=3438ab55351a300f6edb59e85407413a&oe=5EC73B0A";
         $asunto = "Felicitaciones te has registrado correctamente";
         
@@ -33,7 +33,7 @@ class SendEmailMemberController extends Controller
         $message = '<html><body>';
         $message .= '<div style="text-align: center;">Si no visualizas este correo haz clic <a href="'.$url.'">aquí</a></div>';
         $message .= '<div style="text-align: center;background-color: green;">';
-        $message .= '<a target="_blank" rel="noopener noreferrer nofollow" href="http://www.gatosrugby.com.co/GRC/" style="text-align:center"><img width="50%" height="50%" src="'.$imagen.'"></a>';
+        $message .= '<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.gatosrugby.com.co/GRC/" style="text-align:center"><img width="50%" height="50%" src="'.$imagen.'"></a>';
         $message .= '</div>';
 
         $message .= '</body></html>';

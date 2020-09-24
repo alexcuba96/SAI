@@ -47,11 +47,11 @@
     					<form action="auth" id="frmSignin" method="POST" class="text-left form-validate">
     						{{ csrf_field() | raw }}
     						<div class="form-group-material">
-    							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material">
+    							<input id="login-username" type="text" name="email" required data-msg="Por favor ingresa un usuario" class="input-material" title="Ingrese Correo Electrónico con el que se registro">
     							<label for="login-username" class="label-material">Usuario</label>
     						</div>
     						<div class="form-group-material">
-    							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material">
+    							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material" title="Ingrese la clave de registro">
     							<label for="login-password" class="label-material">Clave</label>
     						</div>
     						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Login</button>

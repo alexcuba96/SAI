@@ -24,7 +24,7 @@
                                             <th>#</th>
                                             <th>Fecha Inicio</th>
                                             <th>Posición</th>
-                                            <th>Categoria</th>
+                                            <th>Categoría</th>
                                             <th>Identificación Miembro</th>
                                             <th>Estado</th>
                                             {% if group_id == 1 %}
@@ -91,18 +91,16 @@
 
                     <div class="form-group">
                         <label>Fecha Inicio</label>
-                        <input type="date" placeholder="Fecha Inicio" v-name="Fecha Inicio" name="fecha_inicio" class="form-control">
+                        <input type="date" placeholder="Fecha Inicio" v-name="Fecha Inicio" name="fecha_inicio" class="form-control" title="Fecha en la que inicio la práctica del deporte">
                     </div>
 
                     <div class="form-group">
                         <label class="form-control-label">Posicion</label>
                         <div>
-                            <select name="id_posicion" id="id_posicion" class="form-control" v-name="Posición">
+                            <select name="id_posicion" id="id_posicion" class="form-control" v-name="Posición" title="Posición en la que regularmetne Juega">
                                 <option value="">Seleccione</option>
-
                             </select>
                         </div>
-
                     </div>
 
                     <div class="form-group">
@@ -113,7 +111,6 @@
 
                             </select>
                         </div>
-
                     </div>
 
                     <div class="form-group">
@@ -126,7 +123,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="form-group">
                         <label class="form-control-label">Estado</label>

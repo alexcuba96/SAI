@@ -50,16 +50,16 @@
 						</div>
 						<form id="frmRegistrarse">
 							<div class="form-group-material">
-								<input id="login-username" type="text" v-name="Usuario" v-only="text" name="username" class="input-material">
+								<input id="login-username" type="text" v-name="Usuario" v-only="text" name="username" class="input-material" title="Ingrese Nombre(s) Y Apellido(s) del usuario">
 								<label for="login-username" class="label-material">Nombre(s) Y Apellido(s)</label>
 							</div>
 							<div class="form-group-material">
-								<input type="text" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="input-material">
+								<input type="text" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="input-material" title="Ingrese Documento Identidad del usuario">
 								<label for="cedula" class="label-material">Documento Identidad</label>
 							</div>
 
 							<div class="form-group-material">
-								<input id="email" type="text" v-name="E-mail" v-only="email" name="email" class="input-material">
+								<input id="email" type="text" v-name="E-mail" v-only="email" name="email" class="input-material" title="Ingrese Correo Electrónico del usuario, será con el que inicie sesión">
 								<label for="email" class="label-material">Correo Electrónico</label>
 							</div>
 
@@ -96,10 +96,13 @@
 						<small>¿Ya esta registrado?
 						</small>
 						<a href="{{baseUrl}}/auth" class="signup">Inicia Sesión</a>
-
-
+						<br/>
+						<br/>
+						<a href="{{baseUrl}}/auth"   class="signup" >Salir</a>	
+						<a href="{{baseUrl}}/getManual" class="signup" target="_blank">Ayudas</a>
+					    <br/>
+						<a href="https://www.gatosrugby.com.co/GRC/"   class="signup" >Gatos Rugby Club</a>
 					</div>
-
 				</div>
 			</div>
 		</div>

@@ -35,7 +35,7 @@
 												<tr>
 													<th>#</th>
 													<th>Usuario</th>
-													<th>Email</th>
+													<th>Correo Electrónico</th>
 													<th>Perfil</th>
 													<th>Estado</th>
 													{% if group_id == 1 %}
@@ -111,7 +111,7 @@
 												<tr>
 													<th>#</th>
 													<th>Usuario</th>
-													<th>Email</th>
+													<th>Correo Electrónico</th>
 													<th>Perfil</th>
 													<th>Estado</th>
 													{% if group_id == 1 %}
@@ -191,26 +191,26 @@
 						<div class="form-row">
 
 							<div class="form-group col-md-6">
-								<label>Nombre Usuario</label>
-								<input type="text" placeholder="Usuario" v-name="Usuario" v-only="text" name="username" class="form-control">
+								<label>Nombre(s) y Apellido(s) de Usuario</label>
+								<input type="text" placeholder="Nombre(s) y Apellido(s)" v-name="Usuario" v-only="text" name="username" class="form-control" title="Ingrese Nombre(s) y Apellido(s) del usuario">
 							</div>
 
 							<div class="form-group col-md-6">
 								<label>Cédula Usuario</label>
-								<input type="text" placeholder="Cedula" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="form-control">
+								<input type="text" placeholder="Cédula" v-name="Cédula" v-only="number" v-min="3" name="cedula" id="cedula" class="form-control" title="Ingrese cédula del usuario">
 							</div>
 						</div>
 
 						<div class="form-row">
 
 							<div class="form-group col-md-6">
-								<label>E-Mail</label>
-								<input type="text" placeholder="E-Mail" v-name="E-mail" v-only="email" name="email" class="form-control">
+								<label>Correo Electrónico</label>
+								<input type="text" placeholder="Correo Electrónico" v-name="E-mail" v-only="email" name="email" class="form-control" title="Ingrese Correo Electrónico del usuario, será con el que inicie sesión">
 							</div>
 
 							<div class="form-group col-md-6">
 								<label>Clave</label>
-								<input type="password" placeholder="Clave" v-name="Clave" name="password" class="form-control">
+								<input type="password" placeholder="Clave" v-name="Clave" name="password" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 							</div>
 						</div>
 
