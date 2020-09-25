@@ -64,11 +64,11 @@
 							</div>
 
 							<div class="form-group-material">
-								<input id="password" type="password" v-name="Clave" name="password" class="input-material">
+								<input id="password" type="password" v-name="Clave" name="password" class="input-material" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 								<label for="password" class="label-material">Clave</label>
 							</div>
 							<div class="form-group-material">
-								<input id="passwordConfirm" type="password" v-name="Confirmar Clave" v-only="confirmar" name="passwordConfirm" class="input-material">
+								<input id="passwordConfirm" type="password" v-name="Confirmar Clave" v-only="confirmar" name="passwordConfirm" class="input-material" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 								<label for="passwordConfirm" class="label-material">Confirmar Clave</label>
 							</div>
 
@@ -93,15 +93,14 @@
 							</div>
 						</form>
 
-						<small>Ya esta registrado?
+						<small>¿Ya esta registrado?
 						</small>
-						<a href="{{baseUrl}}/auth" class="signup">Inicia Sesión</a>
+							<a href="{{baseUrl}}/auth" class="signup">Inicia Sesión</a>
 						<br/>
-						<br/>
-						<a href="{{baseUrl}}/auth"   class="signup" >Salir</a>	
+						<br/>	
 						<a href="{{baseUrl}}/getManual" class="signup" target="_blank">Ayudas</a>
 					    <br/>
-						<a href="https://www.gatosrugby.com.co/GRC/"   class="signup" >Gatos Rugby Club</a>
+						<a href="http://www.gatosrugby.com.co/GRC/" target="_blank"  class="signup" >Gatos Rugby Club</a>
 					</div>
 				</div>
 			</div>

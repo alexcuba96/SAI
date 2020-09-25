@@ -210,7 +210,7 @@
 
 							<div class="form-group col-md-6">
 								<label>Clave</label>
-								<input type="password" placeholder="Clave" v-name="Clave" name="password" class="form-control">
+								<input type="password" placeholder="Clave" v-name="Clave" name="password" class="form-control" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 							</div>
 						</div>
 

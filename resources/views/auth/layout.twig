@@ -54,15 +54,19 @@
     							<input id="login-password" type="password" name="password" required data-msg="Por favor ingresa la clave" class="input-material" title="Por favor ingresa la clave">
     							<label for="login-password" class="label-material">Clave</label>
     						</div>
-    						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Login</button>
+    						<div class="form-group text-center"><button id="login" type="submit" class="btn btn-primary">Ingresar</button>
     							<!-- This should be submit button but I replaced it with <a> for demo purposes-->
     						</div>
     					</form>
-						<small>No tienes una cuenta? </small>
-						<a href="{{baseUrl}}/reg/registrarRed" class="signup">Registrate</a>
+						<small>¿No tienes una cuenta? </small>
+						<a href="{{baseUrl}}/reg/registrarRed" class="signup">Regístrate</a>
 						</br>
 						<br/>
-						<a href="https://www.gatosrugby.com.co/GRC/"   class="signup" >Gatos Rugby Club</a>
+						<a  href="{{baseUrl}}/getManual" target="_blank" class="signup">¿Olvido la Contraseña?</a>	
+						<br/>
+							<a href="{{baseUrl}}/getManual" target="_blank" class="signup">Ayudas</a>
+						</br>
+						<a href="http://www.gatosrugby.com.co/GRC/" target="_blank" class="signup" >Gatos Rugby Club</a>
     					{% if flash.getMessages('error') %}
     						<div class="authFailed">
     							{{ flash.getMessage('error') | first }}

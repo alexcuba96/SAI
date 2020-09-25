@@ -26,7 +26,6 @@
 								<div class="card-body">
 									<form class="form" role="form" id="updateUser" autocomplete="off">
 
-
 										<input type="hidden" class="tipoEstadoSelected novalidate" value="{{data.id_estado}}">
 
 										<input type="hidden" class="tipoPerfilSelected novalidate" value="{{data.group_id}}">
@@ -34,7 +33,7 @@
 										<input type="hidden" class="id novalidate" name="id" id="id" value="{{data.id}}">
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label form-control-label">Nombre(s) y Apellido(s) de Usuario</label>
+											<label class="col-lg-3 col-form-label form-control-label">Nombre(s) y Apellido(s)</label>
 											<div class="col-lg-9">
 												<input type="text" placeholder="Usuario" v-name="Usuario" v-only="text" name="username" id="username" class="form-control" value="{{data.username}}">
 											</div>
@@ -48,7 +47,7 @@
 										<div class="form-group row">
 											<label class="col-lg-3 col-form-label form-control-label">Clave</label>
 											<div class="col-lg-9">
-												<input type="password" placeholder="Clave" v-name="Ckave" name="password" class="form-control" value="{{data.password}}">
+												<input type="password" placeholder="Clave" v-name="Ckave" name="password" class="form-control" value="{{data.password}}" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Ingrese una contraseña válida: 8 a 12 caracteres, contenga Letras mayúsculas, minúsculas y números.">
 											</div>
 										</div>
 
