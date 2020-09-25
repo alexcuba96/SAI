@@ -54,6 +54,11 @@ class HomeController extends Controller
 		return $this->view->render($response, 'partials/WebHelp/index.htm');
 	}
 
+	public function getManualContrasena($request, $response)
+	{
+		return $this->view->render($response, 'partials/Ayudas/OlvidoContrasena/index.html');
+	}
+	
 	public function users($request, $response,$args)
 	{
 

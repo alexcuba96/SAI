@@ -25,7 +25,7 @@ $app->group('', function() use ($app) {
 	$app->get('/getConcepto', 'HomeController:getConcepto');
 	$app->get('/getManual', 'HomeController:getManual');
 	$app->get('/getInfDep/{id}', 'HomeController:getInfDep');
-	
+	$app->get('/getManualContrasena', 'HomeController:getManualContrasena');
 })->add(new AuthMiddleware($container));
 
 $app->group('/usuarios', function() use ($app) {
