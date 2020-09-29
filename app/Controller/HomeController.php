@@ -51,7 +51,11 @@ class HomeController extends Controller
 
 	public function getManual($request, $response)
 	{
-		return $this->view->render($response, 'partials/WebHelp/index.htm');
+		return $this->view->render($response, 'partials/ayudas/AyudasSai/index.htm');
+	}
+	public function getManualAcercaDe($request, $response)
+	{
+		return $this->view->render($response, 'partials/ayudas/AcercaDe/index.htm');
 	}
 
 	public function getManualContrasena($request, $response)

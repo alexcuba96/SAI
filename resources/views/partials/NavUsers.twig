@@ -35,18 +35,21 @@
 					</li>
 
 					<!--<li><a href="{{baseUrl}}/users"> <i class="fa fa-users" aria-hidden="true"></i>Usuarios</a></li>
-										  
-					<li><a href="{{baseUrl}}/miembros"> <i class="fa fa-id-card-o" aria-hidden="true"></i>Miembros</a></li>
-										  
-					<li><a href="{{baseUrl}}/infdep"> <i class="fa fa-address-book-o" aria-hidden="true"></i>Información Deportiva</a></li>-->
+															  
+										<li><a href="{{baseUrl}}/miembros"> <i class="fa fa-id-card-o" aria-hidden="true"></i>Miembros</a></li>
+															  
+										<li><a href="{{baseUrl}}/infdep"> <i class="fa fa-address-book-o" aria-hidden="true"></i>Información Deportiva</a></li>-->
 
-<!--
+					<!--
+										<li>
+											<a href="{{baseUrl}}/getPagos">
+												<i class="fa fa-money" aria-hidden="true"></i>Pagos</a>
+										</li>
+										-->
 					<li>
-						<a href="{{baseUrl}}/getPagos">
-							<i class="fa fa-money" aria-hidden="true"></i>Pagos</a>
+						<a href="{{baseUrl}}/getInfDep/{{identificacion}}">
+							<i class="fa fa-address-book-o" aria-hidden="true"></i>Información Deportiva</a>
 					</li>
-					-->
-					<li><a href="{{baseUrl}}/getInfDep/{{identificacion}}"> <i class="fa fa-address-book-o" aria-hidden="true"></i>Información Deportiva</a></li>
 
 					<li>
 						<a style="background-color: gray;">
@@ -69,8 +72,19 @@
 
 
 					<li>
-						<a href="{{baseUrl}}/getManual">
-							<i class="fa fa-book" aria-hidden="true"></i>Manual Usuario</a>
+						<a href="#ControlAyudasDropdown" aria-expanded="false" data-toggle="collapse">
+							<i class="fa fa fa-book"></i>Ayudas</a>
+						<ul id="ControlAyudasDropdown" class="collapse list-unstyled ">
+							<li>
+								<a href="{{baseUrl}}/getManual" target="_blank">Ayudas</a>
+							</li>
+							<li>
+								<a href="{{baseUrl}}/getManual" target="_blank">Manual Técnico e Instalación</a>
+							</li>
+							<li>
+								<a href="{{baseUrl}}/getManualAcercaDe" target="_blank">Acerca de...</a>
+							</li>
+						</ul>
 					</li>
 
 				</ul>
