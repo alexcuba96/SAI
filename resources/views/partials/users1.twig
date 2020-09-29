@@ -104,7 +104,7 @@
 								<div
 									class="card-body">
 									<!--<a id="btn_editar" class="btn btn-primary float-left" data-toggle="modal" href="#myModal">Crear
-																																																																								</a>-->
+																																																																																	</a>-->
 									<div class="table-responsive">
 										<table class="table table-striped table-hover" id="tableusu2">
 											<thead>
@@ -151,8 +151,8 @@
 																	</a>
 
 																	<!--<button type="button" onclick="deleteUser({{data.id}});" id="btn_deleteusu" class="btn btn-primary">
-																																																																																																																																																				<i class="fa fa-trash-o" aria-hidden="true"></i>
-																																																																																																																																																			</button>-->
+																																																																																																																																																																					<i class="fa fa-trash-o" aria-hidden="true"></i>
+																																																																																																																																																																				</button>-->
 																</td>
 															{% endif %}
 														</tr>
@@ -245,8 +245,8 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript">
-	function deleteUser(id) {
+	<script type="text/javascript">
+		function deleteUser(id) {
 var baseUrl = document.getElementById('baseurl').value;
 
 swal({
@@ -290,8 +290,9 @@ console.log("Error al eliminar el usuario" + response);
 dataType: 'json'
 })
 } else {
-swal("Cancelado", "Tu registro esta guardado", "error");
+swal("Cancelado", "Proceso Cancelado", "error");
 }
 });
 }
-</script>{% endblock %}
+	</script>
+{% endblock %}

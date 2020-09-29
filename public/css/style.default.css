@@ -282,7 +282,7 @@ table {
     background-color: #F4F7FA;
     min-height: 100vh;
     padding-bottom: 50px;
-    background-image: url(https://pbs.twimg.com/profile_images/543147071792893952/DxawOUCb.png);
+    background-image: url('../images/NuevoFondo.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
